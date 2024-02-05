@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imv_profile_pic"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/unblast"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/imv_profile_pic"
+        app:layout_constraintStart_toEndOf="@id/imv_profile_pic"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_2h"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toEndOf="@id/imv_profile_pic"
+        app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+    <ImageView
+        android:id="@+id/world_icon"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="5dp"
+        android:contentDescription="@string/icon"
+        android:scaleType="fitCenter"
+        android:src="@drawable/world_icon"
+        app:layout_constraintBottom_toBottomOf="@id/tv_time"
+        app:layout_constraintStart_toEndOf="@id/tv_time"
+        app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+    <ImageView
+        android:id="@+id/dots_icon"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="15dp"
+        android:contentDescription="@string/icon"
+        android:src="@drawable/dots_icon"
+        app:layout_constraintBottom_toBottomOf="@id/tv_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+    <TextView
+        android:id="@+id/tv_post"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:autoLink="web"
+        android:text="@string/buckle_up_because_change_is_coming_to_wordpress_http_unblast_com_color_schemes"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/image_post"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imv_profile_pic" />
+
+    <ImageView
+        android:id="@+id/image_post"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/image_post"
+        android:src="@drawable/triangle_shape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_post" />
+
+    <TextView
+        android:id="@+id/tv_likes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:drawablePadding="8dp"
+        android:text="@string/_12"
+        android:textSize="16sp"
+        app:drawableStartCompat="@drawable/smaller_like"
+        app:layout_constraintStart_toStartOf="@id/image_post"
+        app:layout_constraintTop_toBottomOf="@id/image_post" />
+
+    <TextView
+        android:id="@+id/tv_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="@string/_1_share"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/share_image"
+        app:layout_constraintTop_toBottomOf="@id/image_post" />
+
+    <ImageView
+        android:id="@+id/imv_drop_down_arrow"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="8dp"
+        android:src="@android:drawable/arrow_down_float"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_post" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/share_image"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="8dp"
+        android:src="@drawable/avatar"
+        app:layout_constraintEnd_toStartOf="@id/imv_drop_down_arrow"
+        app:layout_constraintTop_toBottomOf="@id/image_post" />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_share" />
+
+    <LinearLayout
+        android:id="@+id/ln_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintTop_toBottomOf="@id/separator">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_like"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/like"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:icon="@drawable/like"
+            app:iconTint="@color/black" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_comment"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            android:text="@string/comment"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:icon="@drawable/comment"
+            app:iconTint="@color/black" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_share"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".9"
+            android:text="@string/share"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:icon="@drawable/share"
+            app:iconTint="@color/black" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

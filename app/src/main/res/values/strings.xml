@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Assignment5</string>
+    <string name="facebook">Facebook</string>
+    <string name="email">Email or phone number</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up_for_facebook">Sign Up for Facebook</string>
+    <string name="help_center">Help Center</string>
+    <string name="password">Password</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="unblast">Unblast</string>
+    <string name="zeyad">Zeyad</string>
+    <string name="_2h">2 hrs</string>
+    <string name="icon">icon</string>
+    <string name="first_post_in_android">First post in android</string>
+    <string name="image_post">image post</string>
+    <string name="like">Like</string>
+    <string name="todo">TODO</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="_12">12</string>
+    <string name="_1_share">1 share</string>
+    <string name="comment">Comment</string>
+    <string name="share">share</string>
+    <string name="buckle_up_because_change_is_coming_to_wordpress_http_unblast_com_color_schemes">Buckle up, because change is coming to WordPress http://unblast.com/color-schemes</string>
+</resources>
